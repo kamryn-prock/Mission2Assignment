@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] </title>
+    <link rel="icon" type="image/png" sizes="32x32" src="img/Smiley Icon.png">
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/Default.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav>
+        <a asp-controller="Blah" asp-action="index">Home</a>
+        <a asp-controller="Blah" asp-action="Calculator">Calculate My Grade</a>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>This is the footer</footer>
+
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

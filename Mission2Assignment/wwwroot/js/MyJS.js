@@ -1,19 +1,16 @@
 ﻿
-document.getElementById("btnCalc").addEventListener("click", function () {
-    AScore = document.getElementById("Ascore").value * .55;
-    GPScore = document.getElementById("GPscore").value * .05;
-    QScore = document.getElementById("Qscore").value * .1;
-    EScore = document.getElementById("Escore").value * .2;
-    IScore = document.getElementById("Iscore").value * .1;
+$("#btnCalc").click(function () {
 
-    TotalScore = Ascore + GPSCore + QScore + EScore + IScore;
+    //Calculate total scores
+    TotalScore = ($("#AScore").val() * .55) + ($("#GPScore").val() * .05) + ($("#QScore").val() * .1) + ($("#EScore").val() * .2) + ($("#IScore").val() * .1);
     LetterGrade = " ";
 
+    //Calculate Letter Grade
     if (TotalScore >= 94) {
         LetterGrade = "A";
     }
     else if (TotalScore >= 90) {
-        LetterGrade = "";
+        LetterGrade = "A-";
     }
     else if (TotalScore >= 87) {
         LetterGrade = "B+";
